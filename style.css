@@ -26,9 +26,10 @@ main {
 .main {
   display: -ms-grid;
   display: grid;
+  position: relative;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .main {
     margin-top: 6rem;
     padding-bottom: 12rem;
@@ -46,7 +47,7 @@ main {
   padding: 1.3rem 2rem;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .img-container {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -95,12 +96,11 @@ main {
   background-position: center top;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .paragraph-container {
     padding-left: 4rem;
     text-align: left;
     margin-right: -6rem;
-    z-index: 2;
     padding-top: 3rem;
   }
 }
@@ -120,7 +120,7 @@ main {
           align-items: center;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .paragraph-container .details {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

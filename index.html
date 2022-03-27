@@ -23,14 +23,14 @@
   </head>
   <body>
     <main>
-      <div class="main other-slide"">
+      <div class="main" id="slide-one">
         <div class="img-container">
           <img src="./images/image-tanya.jpg" alt="avatar" class="avatar" />
           <span class="nav-btn">
-            <button>
+            <button class="prev-btn">
               <img src="./images/icon-prev.svg" alt="icon prev" />
             </button>
-            <button>
+            <button class="next-btn">
               <img src="./images/icon-next.svg" alt="icon next" />
             </button>
           </span>
@@ -46,14 +46,14 @@
       </div>
 
       <!-- Slide 2 -->
-      <div class="main ">
+      <div class="main other-slide" id="slide-two">
         <div class="img-container">
           <img src="./images/image-john.jpg" alt="avatar" class="avatar" />
           <span class="nav-btn">
-            <button>
+            <button class="prev-btn">
               <img src="./images/icon-prev.svg" alt="icon prev" />
             </button>
-            <button>
+            <button class="next-btn">
               <img src="./images/icon-next.svg" alt="icon next" />
             </button>
           </span>
@@ -71,5 +71,24 @@
         </div>
       </div>
     </main>
+    <script>
+      const prevBtn = document.querySelectorAll(".prev-btn");
+      const nextBtn = document.querySelectorAll(".next-btn");
+      const slideOne = document.getElementById("slide-one");
+      const slideTwo = document.getElementById("slide-two");
+      prevBtn.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          slideTwo.classList.toggle("other-slide");
+          slideOne.classList.toggle("other-slide");
+        });
+      });
+
+      nextBtn.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          slideTwo.classList.toggle("other-slide");
+          slideOne.classList.toggle("other-slide");
+        });
+      });
+    </script>
   </body>
 </html>
