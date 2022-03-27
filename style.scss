@@ -1,0 +1,115 @@
+$dark-blue: hsl(240, 38%, 20%);
+$grayish-blue: hsl(240, 18%, 77%);
+$font-face: Inter, san-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $font-face;
+  font-size: 2rem;
+  color: $dark-blue;
+}
+main {
+  width: 80%;
+  max-width: 900px;
+  display: grid;
+  margin: auto;
+  position: relative;
+  background-image: url(./images/pattern-curve.svg);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+
+.main {
+  display: grid;
+  @media screen and (min-width: 700px) {
+    & {
+      margin-top: 6rem;
+      padding-bottom: 12rem;
+      grid-template-columns: auto 1fr;
+    }
+  }
+}
+.img-container {
+  background-image: url(./images/pattern-bg.svg);
+  background-size: contain;
+  position: relative;
+  width: 300px;
+  margin: 2rem auto;
+  padding: 1.3rem 2rem;
+  @media screen and (min-width: 700px) {
+    & {
+      order: 1;
+      margin: 0;
+      justify-content: center;
+      align-items: center;
+      width: 350px;
+    }
+  }
+  .avatar {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+      rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  }
+  .nav-btn {
+    position: absolute;
+    bottom: 12px;
+    left: 100px;
+    padding: 0.05rem;
+    border-radius: 20px;
+    background-color: white;
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    img {
+      padding: 0 0.8rem;
+    }
+  }
+}
+.paragraph-container {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-image: url(./images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @media screen and (min-width: 700px) {
+    & {
+      padding-left: 4rem;
+      text-align: left;
+      margin-right: -6rem;
+      z-index: 2;
+      padding-top: 3rem;
+    }
+  }
+
+  .details {
+    padding-top: 2rem;
+    color: $grayish-blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: 700px) {
+      & {
+        flex-direction: row;
+        font-size: 1.5rem;
+        justify-content: start;
+      }
+    }
+  }
+  span {
+    display: block;
+    padding-right: 0.5rem;
+    color: $dark-blue;
+    font-weight: bold;
+  }
+}
+.other-slide {
+  position: absolute;
+  transform: translateY(-100%);
+  // z-index: 10;
+}
