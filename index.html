@@ -23,7 +23,7 @@
   </head>
   <body>
     <main>
-      <div class="main" id="slide-one">
+      <section class="main" id="slide-one">
         <div class="img-container">
           <img src="./images/image-tanya.jpg" alt="avatar" class="avatar" />
           <span class="nav-btn">
@@ -43,10 +43,10 @@
           </p>
           <h1 class="details"><span>Tanya Sinclair </span> UX Engineer</h1>
         </div>
-      </div>
+      </section>
 
       <!-- Slide 2 -->
-      <div class="main other-slide" id="slide-two">
+      <section class="main other-slide" id="slide-two">
         <div class="img-container">
           <img src="./images/image-john.jpg" alt="avatar" class="avatar" />
           <span class="nav-btn">
@@ -69,25 +69,22 @@
             <span>John Tarkpor </span> Junior Front-end Developer
           </h1>
         </div>
-      </div>
+      </section>
     </main>
     <script>
       const prevBtn = document.querySelectorAll(".prev-btn");
       const nextBtn = document.querySelectorAll(".next-btn");
       const slideOne = document.getElementById("slide-one");
       const slideTwo = document.getElementById("slide-two");
+      function handleSlide() {
+        slideTwo.classList.toggle("other-slide");
+        slideOne.classList.toggle("other-slide");
+      }
       prevBtn.forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          slideTwo.classList.toggle("other-slide");
-          slideOne.classList.toggle("other-slide");
-        });
+        btn.addEventListener("click", handleSlide);
       });
-
       nextBtn.forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          slideTwo.classList.toggle("other-slide");
-          slideOne.classList.toggle("other-slide");
-        });
+        btn.addEventListener("click", handleSlide);
       });
     </script>
   </body>
